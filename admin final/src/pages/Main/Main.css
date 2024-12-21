@@ -1,0 +1,91 @@
+/* Main container for layout */
+.Main .container {
+  display: flex;
+  width: 100vw;
+  height: 100vh; /* Ensure full height layout */
+}
+
+/* Outlet area where content appears */
+.Main .container .outlet {
+  flex-grow: 1;
+  padding: 1.5rem;
+  background-color: #ecf0f1; /* Lighter background color for content */
+  border-left: 1px solid #ddd; /* Subtle divider line */
+  overflow-y: auto; /* Ensures content is scrollable */
+  transition: margin-left 0.3s ease;
+}
+
+/* Navigation panel */
+.Main .container .navigation {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  background-color: #2c3e50; /* Darker background for the nav */
+  color: #ecf0f1; /* Light text color for contrast */
+  width: 250px; /* Increase width for a more spacious sidebar */
+  padding-top: 40px;
+  z-index: 1000;
+  border-right: 3px solid #1d1c1b; /* Border between navigation and content */
+  transition: background-color 0.3s ease, width 0.3s ease; /* Added width transition */
+  box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+/* Navigation links styling */
+.Main .container .navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.Main .container .navigation ul li {
+  padding: 12px 30px; /* Increased padding for better spacing */
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover and active state for navigation links */
+.Main .container .navigation ul li.active,
+.Main .container .navigation ul li:hover {
+  background-color: #e74c3c; /* Lighter red for active/hover state */
+  transform: scale(1.05); /* Subtle scaling effect */
+}
+
+/* Navigation link text */
+.Main .container .navigation ul li a {
+  text-decoration: none;
+  color: #ecf0f1;
+  display: block;
+  padding: 10px 0;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+/* Changing text color on hover */
+.Main .container .navigation ul li a:hover {
+  color: #fff;
+}
+
+/* Logout link at the bottom */
+.Main .container .navigation ul li.logout {
+  cursor: pointer;
+  margin-top: auto;
+  padding-bottom: 20px;
+  font-size: 14px;
+  color: #f39c12;
+  font-weight: normal;
+  transition: color 0.3s ease;
+}
+
+.Main .container .navigation ul li.logout:hover {
+  color: #d35400;
+}
+
+/* On hover, the navigation container slightly expands */
+.Main .container .navigation:hover {
+  width: 280px; /* Slight width increase on hover */
+}
+
+/* Add a smooth shadow transition for the outlet */
+.Main .container:hover .outlet {
+  margin-left: 250px; /* Align the content properly when the nav expands */
+}

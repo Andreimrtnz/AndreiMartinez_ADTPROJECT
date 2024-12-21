@@ -1,0 +1,116 @@
+.Register {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.85),
+      rgba(0, 0, 0, 0.85)
+    ),
+    url('dark-laptop-rswupf2cxn4hatxy.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.main-container {
+  width: 450px;
+  border-radius: 0.75rem;
+  background-color: rgba(25, 25, 25, 0.9); /* Dark background for contrast */
+  padding: 2rem;
+  color: rgba(220, 220, 220, 1); /* Light gray text for readability */
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.8);
+}
+
+.main-container h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: rgba(240, 240, 240, 1); /* Brighter text for the heading */
+}
+
+.form-containerg {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.form-group label {
+  color: rgba(200, 200, 200, 1); /* Slightly lighter gray for labels */
+  margin-bottom: 6px;
+}
+
+.form-group input {
+  padding: 0.9rem;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  outline: none;
+  transition: border 0.3s ease, background 0.3s ease;
+}
+
+.form-group input:focus {
+  border: 1px solid #4f9dff; /* Blue border for focus */
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.submit-container {
+  grid-column: span 2;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.btn-register {
+  display: block;
+  width: 100%;
+  background: linear-gradient(to right, #4f9dff, #1e88e5); /* Blue gradient for button */
+  padding: 1rem;
+  text-align: center;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(79, 157, 255, 0.5); /* Subtle shadow */
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-register:hover {
+  background: linear-gradient(to right, #1e88e5, #1565c0); /* Darker blue hover effect */
+  transform: translateY(-3px);
+}
+
+.reg-container {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: rgba(220, 220, 220, 1); /* Updated to light gray for consistency */
+  text-align: center;
+}
+
+.reg-container a {
+  color: #4f9dff; /* Matches the blue button gradient */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.reg-container a:hover {
+  text-decoration: underline;
+  color: #1e88e5; /* Matches button hover color */
+}
+
+.form-group.full-width {
+  grid-column: span 2;
+}
